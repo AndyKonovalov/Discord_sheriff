@@ -103,27 +103,22 @@ async def on_message(message):
 
 @bot.command()
 async def сложение(ctx, x: float, y: float):
-    res = sum(x, y)
-    await ctx.send(f'Ответ: {res}')
+    await ctx.send(f'Ответ: {sum(x, y)}')
 
 @bot.command()
 async def вычитание(ctx, x: float, y: float):
-    res = sub(x, y)
-    await ctx.send(f'Ответ: {res}')
+    await ctx.send(f'Ответ: {sub(x, y)}')
 
 @bot.command()
 async def деление(ctx, x: float, y: float):
-    res = div(x, y)
-    await ctx.send(f'Ответ: {res}')
+    await ctx.send(f'Ответ: {div(x, y)}')
 
 @bot.command()
 async def корень(ctx, x: float):
-    res = sqrt(x)
-    await ctx.send(f'Ответ: {res}')
+    await ctx.send(f'Ответ: {sqrt(x)}')
 
 @bot.command()
 async def умножение(ctx, x: float, y: float):
-    res = mylt(x, y)
-    await ctx.send(f'Ответ: {res}')
+    await ctx.send(f'Ответ: {mylt(x, y)}')
 
 bot.run(config.settings['discord_token'])
